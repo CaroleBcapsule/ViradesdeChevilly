@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="css./mainstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo-switch.css" />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="jquery.timelinr-0.9.7.js"></script>
+
+
+<style>
+@charset "UTF-8";
+
+/*nav {
+  display: flex;
+    top: 0;
+    float: right;
+
+    }
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+
+
+
+}
+
+nav li {
+  margin-right: 15px;
+  font-weight: bold;
+
+}
+
+#menu nav a{
+  text-decoration :none;
+  
+}
+
+nav li a{
+  font-size: 18px;
+}
+
+nav li a:hover{
+  color : #000000 ;
+
+}
+*/
+
+nav-container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+ flex-wrap: nowrap;
+}
+
+/*
+#headerlogo{
+  display: left;
+  flex-direction: row;
+  align-items: baseline;
+  
+}
+#headerlogo img{
+  width: 300px;
+}*/
+/*/*menu/*/
+nav {
+  display: flex;
+  float: right;
+  top: 0;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+  
+}
+nav ul li {
+  float: left;
+  position: relative;
+
+    margin-right: 0px;
+  font-weight: bold;
+}
+nav ul li a {
+  display: block;
+  padding: 0 10px;
+  line-height: 70px;
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background: #ffffff;
+  color: #000000;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+  z-index: 1;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 0px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+.navigation {
+  height: 70px;
+  background: #;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: left;
+  padding-left: 0px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;}
+.brand img{
+  position: left;
+  width: 300px;
+}
+/*.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}*/
+</style>
+
+
+
+  </head>
+
+<body>
+
+
+
+<header>
+  <section class="navigation">
+    
+  <div class="nav-container">
+   <div class="brand">
+    <img src="logos/logo_header.jpg" alt="logo virade de l'espoir">
+  </div>
+    </div>
+    <nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+      <ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="programmation.html">Programmation</a></li>
+      <li><a href="mucoviscidose.html">La Mucoviscidose</a></li>
+      <li><a href="histoire.html">Notre histoire</a></li>
+      <li><a href="don.html">Faire un don</a></li>
+  
+      </ul>
+    </nav>
+  </div>
+</section>
+</header>
+  <main>
+
+    <header class="content__header">
+          <h2 class="content__title">Les Virades de l'espoir</h2>
+        </header>
+  <div class="content">
+        
+        <div class="slideshow">
+          <div id="slide-1" class="slide" style="background-image: url(images/accueil/accueil_fleur2.jpg)"></div>
+          <div id="slide-2" class="slide" style="background-image: url(images/accueil/accueil_femme.jpg)"></div>
+          <div id="slide-3" class="slide" style="background-image: url(images/accueil/accueil_ballons.jpg)"></div>
+          <div id="slide-4" class="slide" style="background-image: url(images/accueil/accueil_boule.jpg)"></div>
+          <div class="pieces" style="background-image: url(images/accueil/accueil_fleur2.png)"></div>
+        </div>
+        <nav class="menu">
+          <a class="menu__item menu__item--current" href="#slide-1" data-image="images/accueil/accueil_fleur2.jpg">Donner <span>son souffle</span></a>
+          <a class="menu__item" href="#slide-2" data-image="images/accueil/accueil_femme.jpg">Pour respirer <span>demain</span></a>
+          <a class="menu__item" href="#slide-3" data-image="images/accueil/accueil_ballons.jpg">Se divertir <span>ensemble</span></a>
+          <a class="menu__item" href="#slide-4" data-image="images/accueil/accueil_boule.jpg">Pour partager <span>l'espoir</span></a>
+          <p class="menu_texte">28 - 29 septembre 2019 // CHEVILLY</p>
+        </nav>
+    
+      </div>
+    
+  </main>
+
+  <<footer>
+    <div id="partenairesun">
+    <img src="logos/partenaires/logo_creditmutuel.png" alt="logo credit mutuel">
+        <img src="logos/partenaires/logo_artenay.jpg" alt="logo artenay">
+    <img src="logos/partenaires/logo_loiret.png" alt="logo loiret">
+    <img src="logos/partenaires/logo_chevilly.png" alt="logo chevilly">
+    <img src="logos/partenaires/France_Bleu_logo_2015.svg.png" alt="logo france bleu">
+  </div>
+          <div id="partenairesdeux">
+    <img src="logos/partenaires/logo_aidpc.png" alt="logo aid pc">
+            <img src="logos/partenaires/logo_as.png" alt="logo as hôtel">    
+            <img src="logos/partenaires/logo_beauvallet.png" alt="logo beauvallet imprimeur">
+            <img src="logos/partenaires/logo_mamgoz.png" alt="logo mam goz">     
+            <img src="logos/partenaires/logo_proprietescom.jpg" alt="logo proprietesprivees.com">
+            
+    </div>
+    <div class="partner"><a href="partenaires.html">Devenir partenaire</a></div>
+</footer>
+</div>
+
+
+
+<div class="socials">
+  <h3><a href="contact.php"><i class="fa fa-envelope fa-2x"></i></a></h3>
+  <h3><a href="https://www.facebook.com/groups/augustin.buffoni/" target="blank"><i class="fab fa-facebook-f fa-2x"></i></a></h3>
+  <h3><a href="http://www.vaincrelamuco.org" target="blank"><img src="logos/LogoVLMBlanc_aside.png" alt="logo Vaincre la Muco"></a></h3>
+  </div>
+
+
+  
+</body>
+<script>(function($) {
+  $(function() {
+    $('nav ul li > a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+  });
+  document.querySelector('#nav-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+  $('#nav-toggle').click(function() {
+    $('nav ul').toggle();
+  });
+})(jQuery);
+
+</script>
+</html>
+

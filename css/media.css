@@ -1,0 +1,154 @@
+.container
+{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+    margin-top: 50px ;
+    margin-left : 30px;
+    
+    clear: left;
+}
+#photomedia
+{
+	margin :0px 0px 0px 0px;
+}
+p.resultats
+{
+	font-variant: small-caps;
+}
+
+    .post-slide{
+    margin: 5px 20px;
+    position:relative;
+    max-width: 250px
+
+   
+    
+}
+.post-slide .post-img{
+    position: relative;
+    overflow: hidden;
+   
+}
+.post-slide .post-img img{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    
+   
+
+}
+.post-slide .over-layer{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    background: rgba(0,0,0,0.6);
+    transition: all 0.30s ease;
+}
+.post-slide:hover .over-layer{
+    opacity:1;
+}
+.post-slide .post-link{
+    margin:0;
+    padding:0;
+    position: relative;
+    top:45%;
+    text-align:center;
+}
+.post-slide .post-link li{
+    display: inline-block;
+    list-style: none;
+    margin-right:20px;
+}
+.post-slide .post-link li a{
+    color:#fff;
+    font-size:10px;
+}
+.post-slide .post-link li a:hover{
+    color: #106157;
+    text-decoration:none;
+}
+.post-slide .post-date{
+    position:absolute;
+    top:5%;
+    left:4%;
+}
+.post-slide .date{
+    display: inline-block;
+    border-radius: 3px 0 0 1px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background:#333;
+    float: left;
+}
+.post-slide .month{
+    display: inline-block;
+    border-radius: 0 3px 3px 0;
+    padding: 5px 13px;
+    color: #111;
+    font-size: 15px;
+    font-weight: bold;
+    background: #106157;
+}
+.post-slide .post-content{
+    padding:10px;
+}
+.post-slide .post-title{
+    margin:0 0 15px 0;
+}
+.post-slide .post-title a{
+    font-size:15px;
+    font-weight:bold;
+    color:#333;
+    display: inline-block;
+    text-transform:capitalize;
+    transition: all 0.3s ease 0s;
+}
+.post-slide .post-title a:hover{
+    text-decoration: none;
+    color:#106157;
+}
+.post-slide .post-description{
+    font-size: 9px;
+    line-height:24px;
+    color:#808080;
+    max-width: 250px;
+}
+.post-slide .read-more{
+    color:#333;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+    position: relative;
+    transition: color 0.20s linear;
+}
+.post-slide .read-more:hover{
+    text-decoration:none;
+    color:#106157;
+}
+.post-slide .read-more:after{
+    content:"";
+    position: absolute;
+    width:30%;
+    display: block;
+    border:1px solid #106157;
+    transition: all 0.30s ease;
+}
+.post-slide .read-more:hover:after{
+    width:100%;
+}
+@media only screen and (max-width: 479px) {
+    .post-slide .month{
+        font-size:14px;
+    }
+    .post-slide .date{
+        font-size:14px;
+    }
