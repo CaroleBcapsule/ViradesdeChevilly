@@ -1,9 +1,3 @@
-<?php
-$clef_secret = "6LfFb7IUAAAAABK29HxTXhWQ-6wDhBco367rh11h";
-$clef_public = "6LfFb7IUAAAAABbm7hjYAmHzFNBmiHqiBQsxSrB1";
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,8 +9,8 @@ $clef_public = "6LfFb7IUAAAAABbm7hjYAmHzFNBmiHqiBQsxSrB1";
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat">
-            <link rel="stylesheet" href="css./mainstyle.css">
-            <link rel="stylesheet" href="css./contact.css">
+            <link rel="stylesheet" href="/css/mainstyle.css">
+            <link rel="stylesheet" href="/css/contact.css">
   <link rel="icon" href="logos/favicon.ico" />
   
    <meta name="description" content="Les virades de l'espoir de Chevilly à 20 km d'Orléans,
@@ -27,16 +21,6 @@ Retrouvez le programme, et la rétrospective des meilleurs moments des virades d
   <meta name="keywords" content="Virade, virades, virade de l’espoir, virades de l’espoir,virades de chevilly,  espoir, souffle, donner son souffle, manon buffoni, buffoni manon,  muco, mucoviscidose, Chevilly, Artenay, Orléans, Loiret, région centre, carole bellet, bellet carole, augustin buffoni, buffoni augustin, Festival, festivirade, festivirades, musique, Vide-grenier, vide grenier" />
   <link rel="image_src" href="logos/logo_site.png" />
   <meta property="og:image" content="logos/logo_site.png" />
-  <script src="https://www.google.com/recaptcha/api.js?render=<?php echo $clef_public;?>"></script>
-<script>
-grecaptcha.ready(function () {
-  grecaptcha.execute('<?php echo $clef_public;?>', { action: 'contact' }).then(function (token) {
-    var recaptcha = document.getElementById('recaptcha');
-    recaptcha.value = token;
-  });
-});
-</script>
-        
 
 </head>
 <body>
@@ -58,30 +42,14 @@ grecaptcha.ready(function () {
 
 </header>
 
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha'])) 
-{
-  $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-  $recaptcha_response = $_POST['recaptcha'];
-  $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $clef_secret . '&response=' . $recaptcha_response);
-  $recaptcha = json_decode($recaptcha);
-  if ($recaptcha->score >= 0.5) 
-  {
-  echo "succès";
-  } 
-  else 
-  {
-  echo "échec";
-  }
-} 
-?>
+
 <content>
 
    <div class="container">
       <div class="bartext">
 <div class="textebar">Nous contacter</div>
 </div>
-  <form method="post" action="cible.php">
+  <form method="post">
 
     <label for="nom"></label>
     <input type="text" id="nom" name="nom" placeholder="Nom :" required style="max-width: 500px" maxlength="30">
